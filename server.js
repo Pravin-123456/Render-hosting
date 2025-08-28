@@ -6,6 +6,9 @@ fastify.register(require("@fastify/formbody"));
 fastify.register(require("@fastify/cors"));
 
 const PORT = process.env.PORT || 5000; 
+
+fastify.register(require("@fastify/cors"), { origin: "*" });
+
 // register routes
 fastify.register(userRoutes);
 
@@ -21,4 +24,5 @@ const start = async () => {
 };
 
 start();
+
 
