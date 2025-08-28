@@ -1,7 +1,7 @@
 const users = require("../data/users");
 
 const getUsers = async (req, reply) => {
-  reply.status(500).send(users);
+  reply.status(200).send(users);
 };
 
 const getUserById = async (req, reply) => {
@@ -40,3 +40,4 @@ module.exports = {
   updateUser,
   deleteUser,
 };
+
